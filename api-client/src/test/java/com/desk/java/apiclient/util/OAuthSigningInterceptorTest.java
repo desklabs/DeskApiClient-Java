@@ -67,7 +67,7 @@ public class OAuthSigningInterceptorTest {
 
     @Test
     public void authorizeRequestDoesAuthorizeRequest() throws IOException {
-        Request unauthorizedRequest = new Request.Builder().url("https://test.desk.com").build();
+        Request unauthorizedRequest = new Request.Builder().url("https://devel.desk.com").build();
         assertFalse(doesHaveAuthorizationHeader(unauthorizedRequest));
         OkHttpClient.Builder builder = new OkHttpClient.Builder();
         builder.interceptors().add(oAuthSigningInterceptor);
